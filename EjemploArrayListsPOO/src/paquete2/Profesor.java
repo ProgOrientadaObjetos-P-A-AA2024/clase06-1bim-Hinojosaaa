@@ -34,4 +34,13 @@ public class Profesor {
     public String obtenerTipo() {
         return tipo;
     }
+    
+    public String toString(){
+        String cadena = String.format("Datos del profesor\n"
+                + "Nombre del profesor: %s,\n"
+                + "Tipo de contraro: %s\n",
+                obtenerNombre(),
+                obtenerTipo());
+        return cadena;
+    }
 }
