@@ -6,8 +6,15 @@ public class Computador {
     private Procesador procesador;
     private Memoria memoria;
     private double costoComputador;
-
-    public void establecerMarca(String n) {
+    
+   public Computador(String n, Procesador p, Memoria m) {
+       marca = n;
+       procesador = p;
+       memoria = m;
+       calcularCostoCompu();
+   }
+    
+    public void establecerMarcaPC(String n) {
         marca = n;
     }
 
@@ -20,10 +27,10 @@ public class Computador {
     }
 
     public void calcularCostoCompu() {
-        costoComputador = procesador.obtenerCosto() + memoria.obtenerCosto();
+        costoComputador = procesador.obtenerCostoP() + memoria.obtenerCostoM();
     }
     
-    public String obtenerMarca(){
+    public String obtenerMarcaPC(){
         return marca;
     }
     
@@ -33,5 +40,9 @@ public class Computador {
     
     public Memoria obtenerMemoria(){
         return memoria;
+    }
+    
+    public double obtenerCostoComputador(){
+        return costoComputador;
     }
 }

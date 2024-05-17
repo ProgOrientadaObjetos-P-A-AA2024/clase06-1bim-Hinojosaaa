@@ -4,21 +4,25 @@ public class Procesador {
     private String marca;
     private double costo;
     
-    public void establecerMarca(String n){
+    public Procesador(String m, double c) { 
+        marca = m;
+        costo = c;
+    }
+    
+    public void establecerMarcaP(String n){
         marca = n;
     }
     
-    public void establecerCosto(double n){
+    public void establecerCostoP(double n){
         costo = n;
     }
     
-    public String obtenerMarca(){
+    public String obtenerMarcaP(){
         return marca;
     }
     
-    public double obtenerCosto(){
+    public double obtenerCostoP(){
         return costo;
     }
-
     
 }

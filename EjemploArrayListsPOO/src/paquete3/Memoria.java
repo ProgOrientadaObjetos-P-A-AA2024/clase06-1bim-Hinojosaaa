@@ -4,19 +4,24 @@ public class Memoria {
     private String marca;
     private double costo;
     
-    public void establecerMarca(String n){
+    public Memoria(String m, double c) {
+        marca = m;
+        costo = c;
+    }
+    
+    public void establecerMarcaM(String n){
         marca = n;
     }
     
-    public void establecerCosto(double n){
+    public void establecerCostoM(double n){
         costo = n;
     }
     
-    public String obtenerMarca(){
+    public String obtenerMarcaM(){
         return marca;
     }
     
-    public double obtenerCosto(){
+    public double obtenerCostoM(){
         return costo;
     }
 }
